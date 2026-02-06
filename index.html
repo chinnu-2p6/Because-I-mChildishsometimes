@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Just Oru Question sir!💖</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:opsz,wght@8..72,100..400&family=Namdhinggo:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Namdhinggo', serif;
+      text-align: center;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    /* Background image */
+    .background {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,0.55),
+          rgba(0,0,0,0.35),
+          rgba(0,0,0,0.55)
+        ),
+        url("https://images.unsplash.com/photo-1676196920290-b4daec5f93c2?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+
+    h1 {
+      margin-top: 80px;
+      font-family: 'Playwrite IN', cursive;
+      font-size: 26px;
+      color: #ff9fb6;
+      text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    }
+
+    p {
+      font-size: 18px;
+      margin: 12px 0 30px;
+      color: #f0f0f0;
+    }
+
+    button {
+      font-family: 'Namdhinggo', cursive;
+      font-size: 18px;
+      min-width: 120px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.06);
+    }
+
+    #yes {
+      background-color: #ff6f91;
+      color: white;
+    }
+
+    #no {
+      background-color: #b0c4de;
+      position: absolute;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="background"></div>
+
+  <div id="content">
+    <h1>Hey Chanieeeee 💕</h1>
+    <p>I know, I know, I shouldn't be asking this of you, but I made a few changes to make it suitable for the current situation.<br><br> 
+       Also, just bear with me, it could be cringey, weird and silly, but don't mind please.<br><br> 
+       The nerd in me has always wanted to do this for someone really special....so yeah, that would be you.</p>
+    <h1>So Mr. Prashanth, will you please be my valentine for once????🥹💖💖 </h1>
+
+    <button id="yes" onclick="sayYes()">Yes 💗</button>
+    <button id="no" onmouseover="moveNo()">No 🙄</button>
+  </div>
+
+  <script>
+    function sayYes() {
+      document.getElementById("content").innerHTML = `
+        <h1> Wait, did you just say yes after everything I did...Thank youuuuuuuuu da🫂🫂💜💙🩵💛🧡❤️</h1>
+        <p>
+          You have always been a very special person to me.<br>
+          And honestly, you mean so much more to me than you can ever know.<br><br>
+          Although I have literally forced you to a "yes", hehehe🤣🤣🤣🤣🤣🤣<br><br>
+          I honestly didn't do this entirely for fun, I did it because you’re special,
+          because you are to be cherished in the most silliest ways sometimes maybe, and because I wanted to
+          just simply tell you, you are significant more than you understand.<br><br>
+         <h1> Happy Valentine’s Day my dear Mr.Prashanth! <br><br>
+             And I Love youuuuuuuuuuuuuu. Thank you for being so kind🥰🥰🥰🥰🌊<h1>
+        </p>
+      `;
+    }
+
+    let noTexts = [
+      "No va, Adei🙄🙄🙄",
+      "Seriously dude, Are you sure?😒😒", 
+      "kandipaa No dhana?????😒😒",
+      "Nenachen, but Think againnnnnn 🤨",
+      "Pleacheeeeee da🥹🥹🥹🥹🥹",
+      "Naa paaavaaammm laaaaa🥹🥹🥹🥹🥹🥹🥹🥹🥹🥹 ",
+      "Okay, you're being very mean now🥹🥹😭😭😭😭",
+      "Kolai panna vechiradha da, olunga yes sollidu!😏😏😏😏😏😏",
+      "You say no again, kondruven sollten 😤😤😤😤",
+      "Podaaaaaaaa 😌🙄🙄🙄🙄",
+      "No, not applicable 🫤🫤😎😎",
+      "Illa, Mudhiyadhuuuuu Podaaaaaaaa 😏😎😎",
+      "Podaaaa..loossuuuu🤣🤣",
+    ];
+
+    let noCount = 0;
+
+    function moveNo() {
+      const btn = document.getElementById("no");
+
+      const x = Math.random() * (window.innerWidth - 140);
+      const y = Math.random() * (window.innerHeight - 80);
+
+      btn.style.left = x + "px";
+      btn.style.top = y + "px";
+
+      if (noCount < noTexts.length) {
+        btn.innerText = noTexts[noCount];
+        noCount++;
+      }
+    }
+  </script>
+
+</body>
+</html>
